@@ -7,9 +7,39 @@ const loadPrevDataFromStorage = () => {
   return temp;
 };
 
+const setInputFieldData = (id, data) => {
+  document.getElementById(id).value = data ? data : ``;
+};
+
+const preloadData = () => {
+  const data = loadPrevDataFromStorage();
+  //   const data = JSON.parse(ls);
+  console.log(data);
+  if (data) {
+    setInputFieldData("name-field", data["name"]);
+    setInputFieldData("email-field", data["email"]);
+    setInputFieldData("area-field", data["area"]);
+  }
+};
+
+preloadData();
+
 const getValueFromForm = (id) => {
   const form = document.getElementById(id);
   const formVal = form.value;
-  form.innerText = ``;
+  form.value = ``;
   return formVal;
+};
+
+const send = (type) => {
+  const formVal = getValueFromForm(type + "-field");
+  const ls = loadPrevDataFromStorage();
+  ls[type] = formVal;
+  const stringified = JSON.stringify(ls);
+  localStorage.setItem("contact-form", stringified);
+};
+
+const reset = () => {
+  localStorage.clear();
+  preloadData();
 };
