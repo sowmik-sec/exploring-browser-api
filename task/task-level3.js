@@ -13,8 +13,6 @@ const setInputFieldData = (id, data) => {
 
 const preloadData = () => {
   const data = loadPrevDataFromStorage();
-  //   const data = JSON.parse(ls);
-  //   console.log(data);
   if (data) {
     setInputFieldData("name-field", data["name"]);
     setInputFieldData("email-field", data["email"]);
