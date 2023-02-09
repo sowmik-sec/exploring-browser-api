@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level 3 task</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <style>
+      .btn-style {
+        min-width: 150px;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <section>
+      <div>
+        <h1 class="text-white text-center">Please Contact Me</h1>
+        <div>
+          <div class="d-lg-flex justify-content-lg-center mt-5">
+            <div>
+              <p class="text-primary mb-0">Name</p>
+              <input
+                id="name-field"
+                class="form-control"
+                type="text"
+                placeholder="JS"
+              />
+            </div>
+
+            <div class="ms-2 mt-4">
+              <button
+                onclick="del('name')"
+                id="btn-delete-name"
+                class="btn bg-danger text-warning btn-style"
+              >
+                Delete Name
+              </button>
+              <button
+                onclick="send('name')"
+                id="btn-send-name"
+                class="btn bg-danger text-warning btn-style"
+              >
+                Send Name
+              </button>
+            </div>
+          </div>
+          <div class="d-lg-flex justify-content-lg-center mt-3">
+            <div>
+              <p class="text-primary mb-0">Email</p>
+              <input
+                id="email-field"
+                class="form-control"
+                type="text"
+                placeholder="example@gmail.com"
+              />
+            </div>
+
+            <div class="ms-2 mt-4">
+              <button
+                onclick="del('email')"
+                id="btn-delete-email"
+                class="btn bg-danger text-warning btn-style"
+              >
+                Delete Email
+              </button>
+              <button
+                onclick="send('email')"
+                id="btn-send-email"
+                class="btn bg-danger text-warning btn-style"
+              >
+                Send Email
+              </button>
+            </div>
+          </div>
+          <div class="d-lg-flex justify-content-lg-center mt-3">
+            <div>
+              <p class="text-primary mb-0">Message</p>
+              <textarea
+                id="area-field"
+                class="form-control"
+                type="text"
+                placeholder="This project was fun!"
+                cols="23"
+                rows="2"
+              ></textarea>
+            </div>
+
+            <div class="ms-2 mt-4 pt-2">
+              <button
+                onclick="del('area')"
+                id="btn-delete-message"
+                class="btn bg-danger text-warning btn-style"
+              >
+                Delete Message
+              </button>
+              <button
+                onclick="send('area')"
+                id="btn-send-message"
+                class="btn bg-danger text-warning btn-style"
+              >
+                Send Message
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5 d-lg-flex justify-content-lg-center">
+          <div>
+            <button
+              onclick="sendAll()"
+              class="btn btn-danger text-white px-4 py-2 me-lg-5"
+            >
+              Send
+            </button>
+          </div>
+          <div>
+            <button
+              onclick="reset()"
+              class="btn btn-warning text-white px-4 py-2 ms-lg-5"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="task-level4.js"></script>
+  </body>
+</html>
